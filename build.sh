@@ -7,7 +7,7 @@ CLIENT=fladdermus-client
 stack build --stack-yaml=$CLIENT/stack.yaml
 
 # Copy over the javascript
-rm -f fladdermus/static/all.js
+rm -f $SERVER/static/all.js
 cp $(stack path --stack-yaml=$CLIENT/stack.yaml --local-install-root)/bin/*.jsexe/all.js $SERVER/static/all.js
 
 # Build the server
