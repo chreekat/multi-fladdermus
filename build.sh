@@ -2,6 +2,9 @@
 
 SERVER=fladdermus
 CLIENT=fladdermus-client
+FMLIB=fladdermus-lib
+
+stack build --stack-yaml=$FMLIB/stack.yaml
 
 # Build the client
 stack build --stack-yaml=$CLIENT/stack.yaml
@@ -9,6 +12,9 @@ stack build --stack-yaml=$CLIENT/stack.yaml
 # Copy over the javascript
 rm -f $SERVER/static/all.js
 cp $(stack path --stack-yaml=$CLIENT/stack.yaml --local-install-root)/bin/*.jsexe/all.js $SERVER/static/all.js
+
+# TODO: Is this needed?
+touch $SERVER/Setings/StaticFiles.hs
 
 # Build the server
 stack build --stack-yaml=$SERVER/stack.yaml
