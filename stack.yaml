@@ -1,0 +1,10 @@
+packages:
+    - fladdermus-client
+resolver: lts-3.20
+compiler: ghcjs-0.2.0.20151230.3_ghc-7.10.2
+compiler-check: match-exact
+setup-info:
+    ghcjs:
+        source:
+            ghcjs-0.2.0.20151230.3_ghc-7.10.2:
+                url: "https://github.com/nrolland/ghcjs/releases/download/v.0.2.0.20151230.3/ghcjs-0.2.0.20151230.3.tar.gz"
