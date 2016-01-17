@@ -11,7 +11,7 @@ rm -f $SERVER/static/all.js
 cp $(stack path --stack-yaml=$CLIENT/stack.yaml --local-install-root)/bin/*.jsexe/all.js $SERVER/static/all.js
 
 # TODO: Is this needed?
-touch $SERVER/Setings/StaticFiles.hs
+touch $SERVER/Settings/StaticFiles.hs
 
 # Build the server
 stack build --stack-yaml=$SERVER/stack.yaml
