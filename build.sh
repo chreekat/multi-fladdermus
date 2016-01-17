@@ -2,9 +2,6 @@
 
 SERVER=fladdermus
 CLIENT=fladdermus-client
-FMLIB=fladdermus-lib
-
-stack build --stack-yaml=$FMLIB/stack.yaml
 
 # Build the client
 stack build --stack-yaml=$CLIENT/stack.yaml
